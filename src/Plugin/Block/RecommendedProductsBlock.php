@@ -116,7 +116,8 @@ class RecommendedProductsBlock extends BlockBase implements ContainerFactoryPlug
                         'product' => $products[$i]);
     }
     usort($sorted, array($this, 'sortByAffinity'));
-
+    $sorted = array_slice($sorted, 0, 3);
+    
     $build = [];
     foreach ($sorted as $value) {
       $build[$value['product']->id()] = entity_view($value['product']);
