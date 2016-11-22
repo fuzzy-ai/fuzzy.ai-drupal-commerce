@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "8c05acc55e6db40bcf14092d6cbfbbf1",
+    "content-hash": "ee5c04a9431873f0031ad63118ab9840",
+    "packages": [
+        {
+            "name": "fuzzy-ai/sdk",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fuzzy-ai/fuzzy.ai-php.git",
+                "reference": "95baf3dab500d7cbae68094480d210b425054db1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fuzzy-ai/fuzzy.ai-php/zipball/95baf3dab500d7cbae68094480d210b425054db1",
+                "reference": "95baf3dab500d7cbae68094480d210b425054db1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FuzzyAi\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fuzzy.ai",
+                    "homepage": "https://github.com/fuzzy-ai/fuzzy.ai-php"
+                }
+            ],
+            "description": "Fuzzy.ai PHP Library",
+            "homepage": "https://fuzzy.ai",
+            "keywords": [
+                "ai",
+                "api",
+                "fuzzy"
+            ],
+            "time": "2016-11-18 02:08:23"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

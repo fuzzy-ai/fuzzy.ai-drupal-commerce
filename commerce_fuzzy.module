@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains commerce_fuzzy.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function commerce_fuzzy_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the commerce_fuzzy module.
+    case 'help.page.commerce_fuzzy':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Example integration between fuzzy.ai and Drupal Commerce') . '</p>';
+      return $output;
+
+    default:
+  }
+}

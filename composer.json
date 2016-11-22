@@ -1,0 +1,16 @@
+{
+  "name": "drupal/commerce_fuzzy",
+  "type": "drupal-module",
+  "description": "Example integration between fuzzy.ai and Drupal Commerce",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/commerce_fuzzy",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/commerce_fuzzy",
+    "source": "http://cgit.drupalcode.org/commerce_fuzzy"
+  },
+  "require": {
+    "fuzzy-ai/sdk": "^0.2.0"
+  }
+}

@@ -1,0 +1,55 @@
+name: "Product affinity"
+description: "A generic product affinity model"
+outputs:
+  affinity:
+    veryLow: [0, 25]
+    low: [0, 25, 50]
+    medium: [25, 50, 75]
+    high: [50, 75, 100]
+    veryHigh: [75, 100]
+inputs:
+  # true if both products have the same category; else false
+  sameCategory:
+    false: [-1, 0, 1]
+    true: [0, 1, 2]
+  # Absolute value of difference in price between first and
+  # second product, as percent of price of first product
+  priceDifferencePercent:
+    veryLow: [0, 25]
+    low: [0, 25, 50]
+    medium: [25, 50, 75]
+    high: [50, 75, 100]
+    veryHigh: [75, 100]
+  # Number of customers who've bought the first product
+  # that have also bought the second product, as a percentage
+  # of all customers who have bought the first product
+  percentSharedCustomers:
+    veryLow: [0, 25]
+    low: [0, 25, 50]
+    medium: [25, 50, 75]
+    high: [50, 75, 100]
+    veryHigh: [75, 100]
+  # Number of words in both product's title as percentage
+  # of all words in first product's title
+  percentSharedTitleWords:
+    veryLow: [0, 25]
+    low: [0, 25, 50]
+    medium: [25, 50, 75]
+    high: [50, 75, 100]
+    veryHigh: [75, 100]
+  # Number of words in both product's description as percentage
+  # of all words in first product's description
+  percentSharedDescriptionWords:
+    veryLow: [0, 25]
+    low: [0, 25, 50]
+    medium: [25, 50, 75]
+    high: [50, 75, 100]
+    veryHigh: [75, 100]
+rules: [
+  "IF sameCategory IS true THEN affinity IS high"
+  "IF sameCategory IS false THEN affinity IS low"
+  "priceDifferencePercent DECREASES affinity"
+  "percentSharedCustomers INCREASES affinity"
+  "percentSharedTitleWords INCREASES affinity"
+  "percentSharedDescriptionWords INCREASES affinity"
+]

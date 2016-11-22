@@ -1,0 +1,5 @@
+name: Commerce Fuzzy Example
+type: module
+description: Example integration between fuzzy.ai and Drupal Commerce
+core: 8.x
+package: Custom
